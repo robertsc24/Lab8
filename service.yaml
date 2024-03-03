@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: blog-app
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8000 
+      targetPort: 8000  
+      protocol: TCP
+  selector:
+    app: blog-app  
+
